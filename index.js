@@ -81,6 +81,10 @@ async function run() {
 }
 run().catch(err => console.log(err));
 
+app.get('/', async (req, res) => {
+    res.send("App is testing....");
+})
+
 app.listen(port, () => {
     console.log(`Testing app is listening on port ${port}`)
 })
